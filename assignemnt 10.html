@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create a Delay Function </title>
+</head>
+<body>
+  <h3>Delay and async function</h3>
+  <button onclick="createDelay()">Create Delay</button>
+  <p id="hdlay"></p>
+  <p id="wdlay"></p>
+  <script>
+    function delay(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+// 2000 millseconds
+    async function createDelay() {
+      document.getElementById('hdlay').innerText = "Hello";
+      await delay(2000); 
+      document.getElementById('wdlay').innerText = "World";
+    }
+  </script>
+</body>
+</html>
